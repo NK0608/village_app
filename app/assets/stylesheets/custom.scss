@@ -1,0 +1,467 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* mixins, variables, etc. */
+
+$gray-medium-light: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+/* universal */
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $gray-light;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+
+/* header */
+
+.center jumbotron {
+  background-color: green;
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+/* home */
+
+#1 {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $gray-medium-light;
+  color: $gray-light;
+  a {
+    color: $gray;
+    &:hover {
+      color: $gray-darker;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+/* sidebar */
+
+aside {
+  section.user_info {
+    margin-top: 20px;
+  }
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+.gravatar_edit {
+  margin-top: 15px;
+}
+
+.stats {
+  overflow: auto;
+  margin-top: 0;
+  padding: 0;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $gray-lighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: blue;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+  a {
+    padding: 0;
+  }
+}
+
+.users.follow {
+  padding: 0;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+
+/* microposts */
+
+.microposts {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .content {
+    display: block;
+    margin-left: 60px;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+}
+
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+span.picture {
+  margin-top: 10px;
+  input {
+    border: 0;
+  }
+}
+
+/* プロゲート */
+
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN";
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+
+
+.top-wrapper h1 {
+  opacity: 0.7;
+  font-size: 45px;
+  letter-spacing: 5px;
+}
+
+.top-wrapper p {
+  opacity: 0.7;
+}
+
+.btn-wrapper {
+  margin: 20px 0;
+}
+
+.btn-wrapper a {
+  margin: 10px 0;
+  color: black;
+}
+
+.signup {
+  background-color: gray;
+}
+
+
+.twitter {
+  background-color: #55acee;
+}
+
+.btn {
+  padding: 8px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.fa {
+  margin-right: 5px;
+}
+
+header {
+  height: 65px;
+  width: 100%;
+  background-color: green;
+  /* positionプロパティをfixedに、topを0に指定してください */
+  position:fixed;
+  top:0px;
+  
+  /* z-indexを10に指定してください */
+  z-index:10;
+}
+
+.logo {
+  width: 124px;
+  margin-top: 20px;
+}
+
+.header-left h2{
+  font-size: 35px;
+  color: white;
+  float: left;
+}
+
+.header-right h2 {
+  font-size: 35px;
+  color: white;
+  float: right;
+}
+
+.lesson-wrapper {
+  height: 500px;
+  padding-bottom: 80px;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.heading {
+  padding-top: 60px;
+  padding-bottom: 30px;
+  color: #5f5d60;
+}
+
+.heading h2 {
+  font-weight: normal;
+}
+
+.lesson {
+  float: left;
+  width: 25%;
+}
+
+.lesson-icon {
+  position: relative;
+}
+
+.lesson-icon p {
+  position: absolute;
+  top: 90px;
+  width: 100%;
+  color: white;
+}
+
+.txt-contents {
+  width: 80%;
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 12px;
+  color: #b3aeb5;
+}
+
+.heading h3 {
+  font-weight: normal;
+}
+
+.message-wrapper {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.message {
+  padding: 15px 40px;
+  background-color: #5dca88;
+  cursor: pointer;
+  box-shadow: 0 7px #1a7940;
+}
+
+.message:active {
+  position: relative;
+  top: 7px;
+  box-shadow: none;
+}
+
+footer img {
+  width: 125px;
+}
+
+footer p {
+  color: #b3aeb5;
+  font-size: 12px;
+}
+
+footer {
+  padding-top: 30px;
+}
