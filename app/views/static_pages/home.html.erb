@@ -1,28 +1,61 @@
-<!DOCTYPE html>
-<html>
-  <head>
+<!doctype html>
+<html lang="ja">
+<head>
     <meta charset="utf-8">
     <title>TOP</title>
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  </head>
-  <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="org.css" rel="stylesheet" media="screen">
+</head>
+<body>
 
-    <div class="top-wrapper">
-      <div class="container">
-      <img src="Users/kougonaoto/Downloads/main_s.jpeg">
-      <h1>お客様のご来園状況を教えてね！</h1>
-        <div class="person">
-          <a class="adult">大人（中学生以上）</a>
-          <textrea name="1"></textrea>
-          <a class="kids">小人（小学生以上）</a>
-          <textrea name="2"></textrea>
+<!-- content -->
+<div id="content">
+  <div class="container">
 
-          <div class="btn-wrapper">
-            <a href="#" class="btn signup">追加</a>
-          </div>
+    <!-- 上の部分 -->
+    <div class="row">
+      <div class="col-md-1">
+        <%= image_tag  "/main_s.jpeg" %>
+      </div>
+      <div class="col-md-11">
+        <h1 class="title">お客様のご来園状況を教えてね！</h1>
+      </div>
+    </div>
+
+    <!-- 人数入力 -->
+    <div class="row">
+      <div =class="col-md-12">
+        <div class="adult">
+          ◯ 大人（中学生以上）
+        
+          人
+        </div>
+        <div class="child">
+          ◯ 小人（小学生以下）
+
+          人
         </div>
       </div>
     </div>
-  </body>
+
+
+    <!-- 下の部分 -->
+    <div class="row">
+      <div class="col-md-11">
+        <h1>　</h1>
+      </div>
+      <div class="col-md-1">
+        <%= image_tag  "/main_s.jpeg" %>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- end content -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
 </html>

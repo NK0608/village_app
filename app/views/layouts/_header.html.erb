@@ -1,12 +1,37 @@
-<header>
-<div class="container">
-  <div class="header-left">
-  　<h2>東京ドイツ村</h2>
+<!-- top nav -->
+<nav class="navbar navbar-default">
 
-  </div>
-  <div class="header-right">
-  
- 　 <h2><%= link_to "TOP", root_path %></h2>
-  </div>
-</div>
-</header>
+    <div class="container"><!-- 無くても良い -->
+
+        <div class="navbar-header">
+
+            <!-- toggle -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-nav">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+        </div>
+
+        <!-- top menu -->
+        <div class="collapse navbar-collapse" id="top-nav">
+
+            <!-- main navbar -->
+            <ul class="nav navbar-nav">
+                <li>
+                    <h2>東京ドイツ村</h2>
+                </li>
+            </ul>
+
+            <!-- right navbar -->
+            <ul class="nav navbar-nav navbar-right">
+                <li class="TOP">
+                  <%= link_to "TOP",   root_path %>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- end container -->
+</nav>
+<!-- end nav -->
